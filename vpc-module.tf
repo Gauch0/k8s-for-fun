@@ -31,10 +31,14 @@ module "vpc" {
   vpc_tags = local.common_tags
 
   public_subnet_tags = {
-    Type = "Public Subnets"      
+    Type = "Public Subnets" 
+    "kubernetes.io/role/elb" = 1
+    "kubernetes.io/cluster/${local.eks_cluster_name}" = "shared"
   }
   private_subnet_tags = {
     Type = "private-subnets"
+    "kubernetes.io/role/elb" = 1
+    "kubernetes.io/cluster/${local.eks_cluster_name}" = "shared"
   }
 
   database_subnet_tags = {
