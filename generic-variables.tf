@@ -13,5 +13,5 @@ variable "environment" {
 variable "prefix"{
     description = "value to be used as a prefix"
     type = string
-    default = "aws"
+    default = "bff"
 }
