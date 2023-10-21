@@ -30,6 +30,12 @@ variable "vpc_database_subnets" {
     default = ["10.0.151.0/24", "10.0.152.0/24"]
 }
 
+variable "vpc_create_database_subnet_group" {
+    description = "Create Database Subnet Group"
+    type = bool
+    default = true
+}
+
 variable "vpc_create_database_subnet_route_table" {
     description = "Create Database Subnet Route Table"
     type = bool

@@ -2,7 +2,7 @@
 
 # AWS EC2 Instance Type
 
-variable "Instance_type" {
+variable "instance_type" {
   description = "The type of EC2 instance to launch"
   default     = "t3a.nano"
 }
